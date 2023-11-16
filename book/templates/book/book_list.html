@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Book List</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8"> 
+                {% for book in books %}
+                    <a href="{% url 'book_inspect' pk=book.pk %}"><h2>Title: {{book.title}}</h2></a>
+                    <h5>Author: {{book.author}}</h5>
+                    <p><strong>Rating: {{book.rating}}</strong></p><br>
+                    <p>Sinopsis: {{book.sinopsis}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div>
+        <br>
+        <a href="{% url 'book_create' %}"><button>Add book</button></a>
+    </div>
+</body>
+</html>

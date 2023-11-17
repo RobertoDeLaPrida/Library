@@ -12,7 +12,7 @@
     <div class="content container">
         <div class="row">
             <div class="col-md-8"> 
-                {% for book in books %}
+                {% for book in object_list %}
                     <a href="{% url 'book_inspect' pk=book.pk %}"><h2>Title: {{book.title}}</h2></a>
                     <h5>Author: {{book.author}}</h5>
                     <p><strong>Rating: {{book.rating}}</strong></p><br>

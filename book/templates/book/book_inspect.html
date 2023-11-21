@@ -17,6 +17,7 @@
     <div>
         <br>
         <a href="{% url 'book_edit' pk=book.pk %}"><button>Edit</button></a>
+        <a href="{% url 'book_delete' pk=book.pk %}"><button>Borrar<button></a>
         <a href="{% url 'book_list' %}"><button>Go back</button></a>
     </div>
 </body>

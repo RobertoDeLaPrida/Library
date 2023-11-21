@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="tarea">
-        <form action="{% url 'book_list' %}" method="POST">
+        <form action="{% url 'book_create' %}" method="POST">
             {% csrf_token %}
             {{ form.as_p}}
             <button type="submit">Add book</button>
